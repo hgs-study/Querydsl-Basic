@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class CustomerService {
 
-    private final CustomerRepositorySupport customerRepositorySupport;
+    private final CustomerQueryRepository customerQueryRepository;
     private final CustomerRepository customerRepository;
 
 
@@ -17,7 +17,7 @@ public class CustomerService {
     }
 
     public Customer findByLastName(String lastName){
-        return customerRepositorySupport.findByLastName(lastName);
+        return customerQueryRepository.findByLastName(lastName);
     }
 
 }
