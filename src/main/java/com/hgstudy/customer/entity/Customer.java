@@ -21,9 +21,17 @@ public class Customer {
     @Column(name = "last_name")
     private String lastName;
 
+    @Column(name = "company")
+    private String company;
+
     public Customer(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
     }
 
+    public Customer(String firstName, String lastName, String company) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.company = company;
+    }
 }
